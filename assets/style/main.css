@@ -36,6 +36,16 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* custom css */
+
+.listImg{
+  max-width: 75px;
+  max-height: 75px;
+}
+
+
+
+/* bootstrap css */
 *,
 *::before,
 *::after {

@@ -27,6 +27,7 @@ class SongsService {
     let res = await sandBoxApi.get()
     //TODO What are you going to do with this result
     let results = res.data.data.map(rawData => new Song(rawData));
+    console.log(res);
   }
 
   /**
