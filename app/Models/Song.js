@@ -45,6 +45,7 @@ export default class Song {
     <div class="card-body">
         <h4 class="card-title">${this.title}</h4>
         <p class="card-text">${this.artist}</p>
+        <audio controls src="${this.preview}"></audio>
         <button class="btn btn-info" onclick="app.playlistController.addSong()">ADD</button>
     </div>
 </div>
