@@ -31,10 +31,11 @@ export default class Song {
   get playlistTemplate() {
     return `
     <div class="card col-12">
-      <div class="card-body d-flex flex-direction-column">
+      <div class="card-body pl-0 pr-1 pb-2">
+        
         <h5 class="card-title">${this.artist}</h5>
         <h6 class="card-subtitle text-muted">${this.title}</h6>
-        <button class="btn btn-sm btn-danger" onclick="app.playlistController.removeSong('${this._id}')">X</button>
+        </div><div class="card-footer border-0 bg-white pr-0 pl-0 pt-0 pb-1"><button class="btn btn-sm btn-danger" onclick="app.playlistController.removeSong('${this._id}')">X</button>
       </div>
     </div>
         `;
