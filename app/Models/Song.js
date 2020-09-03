@@ -15,11 +15,11 @@ export default class Song {
 
   get Template() {
     return `
-    <div class="card col-12">
+    <div class="card shadow bg-white rounded col-12 my-2">
       <div class="card-body">
       <div class="flex-direction-column justify-content-between">
         <img class="listImg" src="${this.albumArt}" alt="">
-        <button class="btn btn-sm btn-success" onclick="app.playlistController.setActive('${this._id}')">View</button>
+        <button class="btn view-btn btn-sm btn-success" onclick="app.playlistController.setActive('${this._id}')">View</button>
       </div>
         <h5 class="card-title">${this.title}</h5>
         <h6 class="card-subtitle text-muted">${this.artist} - ${this.album}</h6>
