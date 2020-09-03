@@ -42,13 +42,15 @@ export default class Song {
     return `
     <div class="card">
     <img class="card-img-top" src="${this.albumArt}" alt="">
-    <div class="card-body">
+    <div class="card-body pb-0">
         <h4 class="card-title">${this.artist} - ${this.title}</h4>
         <h6 class="card-subtitle text-muted">Album: ${this.album}</h6>
         <p>Buy Now: $${this.price}</p>
         
         <audio controls src="${this.preview}"></audio>
+        </div><div class="card-footer bg-white pt-1 border-0">
         <button class="btn btn-info" onclick="app.playlistController.addSong()">ADD</button>
+        
     </div>
 </div>
     `;
