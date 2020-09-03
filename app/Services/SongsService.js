@@ -12,10 +12,10 @@ class SongsService {
     let url = "https://itunes.apple.com/search?callback=?&term=" + query;
     // @ts-ignore
     $.getJSON(url)
-      .then(res => {
-        ProxyState.songs = res.results.map(rawData => new Song(rawData));
+      .then((res) => {
+        ProxyState.songs = res.results.map((rawData) => new Song(rawData));
       })
-      .catch(err => {
+      .catch((err) => {
         throw new Error(err);
       });
   }
@@ -24,9 +24,9 @@ class SongsService {
    * Retrieves the saved list of songs from the sandbox
    */
   async getMySongs() {
-    let res = await sandBoxApi.get()
+    let res = await sandBoxApi.get();
     //TODO What are you going to do with this result
-    let results = res.data.data.map(rawData => new Song(rawData));
+    let results = res.data.data.map((rawData) => new Song(rawData));
     console.log(res);
   }
 

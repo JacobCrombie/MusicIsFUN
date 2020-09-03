@@ -2,11 +2,10 @@ import SongsController from "./Controllers/SongsController.js";
 import PlaylistController from "./Controllers/PlaylistController.js";
 
 class App {
-  constructor(){
+  constructor() {
     this.songsController = new SongsController();
-    this.playlistController= new PlaylistController()
+    this.playlistController = new PlaylistController();
   }
-    
 }
 
 window["app"] = new App();

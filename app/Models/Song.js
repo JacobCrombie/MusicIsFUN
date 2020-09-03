@@ -1,5 +1,6 @@
 export default class Song {
   constructor(data) {
+    // if (data.kind == "song") {
     this.title = data.trackName || data.title;
     this.albumArt =
       data.albumArt || data.artworkUrl100.replace(/100x100/g, "300x300");
@@ -8,6 +9,8 @@ export default class Song {
     this.price = data.trackPrice || data.price;
     this.preview = data.previewUrl || data.preview;
     this._id = data.trackId || data._id;
+    this.kind = data.kind;
+    // }
   }
 
   get Template() {
@@ -35,7 +38,7 @@ export default class Song {
         `;
   }
 
-  get activeTemplate(){
+  get activeTemplate() {
     return `
     <div class="card">
     <img class="card-img-top" src="${this.albumArt}" alt="">
@@ -45,6 +48,6 @@ export default class Song {
         <button class="btn btn-info" onclick="app.playlistController.addSong()">ADD</button>
     </div>
 </div>
-    `
+    `;
   }
 }
