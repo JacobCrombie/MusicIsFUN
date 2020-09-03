@@ -43,8 +43,10 @@ export default class Song {
     <div class="card">
     <img class="card-img-top" src="${this.albumArt}" alt="">
     <div class="card-body">
-        <h4 class="card-title">${this.title}</h4>
-        <p class="card-text">${this.artist}</p>
+        <h4 class="card-title">${this.artist} - ${this.title}</h4>
+        <h6 class="card-subtitle text-muted">Album: ${this.album}</h6>
+        <p>Buy Now: $${this.price}</p>
+        
         <audio controls src="${this.preview}"></audio>
         <button class="btn btn-info" onclick="app.playlistController.addSong()">ADD</button>
     </div>
